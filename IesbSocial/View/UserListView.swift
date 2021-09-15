@@ -1,16 +1,12 @@
-//
-//  UserListView.swift
-//  IesbSocial
-//
-//  Created by Pedro Henrique on 02/09/21.
-//
-
 import SwiftUI
 
 struct UserListView: View {
     
     @ObservedObject
     var viewModel: UserViewModel
+    
+    @StateObject
+    var postViewModel = PostViewModel()
     
     var body: some View {
         NavigationView {
@@ -20,7 +16,7 @@ struct UserListView: View {
                 }else {
                     List {
                         ForEach(viewModel.users) { user in
-                            NavigationLink(destination: PostListView()) {
+                            NavigationLink(destination: PostListView(user: user)) {
                                 VStack(alignment: .leading) {
                                     Text(user.name).font(.title2)
                                     Text(user.email).font(.subheadline)
@@ -31,9 +27,8 @@ struct UserListView: View {
                 }
             }
             .navigationTitle("Usuários")
-            .environmentObject(PostViewModel())
-
         }
+        .environmentObject(postViewModel)
         .onAppear {
             viewModel.newFetchUsers()
             

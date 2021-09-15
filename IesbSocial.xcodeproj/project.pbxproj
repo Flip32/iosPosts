@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8366E43D26F23761000D202F /* FormUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8366E43C26F23761000D202F /* FormUserView.swift */; };
+		83ECF97526E1A570009C34DA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECF97426E1A570009C34DA /* Post.swift */; };
+		83ECF97726E1ABEA009C34DA /* ObservableObject+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECF97626E1ABEA009C34DA /* ObservableObject+Error.swift */; };
 		EBC8BD6226E18A050034C8E2 /* IesbSocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD6126E18A050034C8E2 /* IesbSocialApp.swift */; };
 		EBC8BD6426E18A050034C8E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC8BD6326E18A050034C8E2 /* ContentView.swift */; };
 		EBC8BD6626E18A070034C8E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC8BD6526E18A070034C8E2 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8366E43C26F23761000D202F /* FormUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUserView.swift; sourceTree = "<group>"; };
+		83ECF97426E1A570009C34DA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		83ECF97626E1ABEA009C34DA /* ObservableObject+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableObject+Error.swift"; sourceTree = "<group>"; };
 		EBC8BD5E26E18A050034C8E2 /* IesbSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IesbSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC8BD6126E18A050034C8E2 /* IesbSocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IesbSocialApp.swift; sourceTree = "<group>"; };
 		EBC8BD6326E18A050034C8E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC8BD7126E18A970034C8E2 /* User.swift */,
+				83ECF97426E1A570009C34DA /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,6 +114,7 @@
 			children = (
 				EBC8BD7726E191E10034C8E2 /* UserListView.swift */,
 				EBC8BD7E26E1A2B50034C8E2 /* PostListView.swift */,
+				8366E43C26F23761000D202F /* FormUserView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC8BD7A26E198010034C8E2 /* URLSession+Map.swift */,
+				83ECF97626E1ABEA009C34DA /* ObservableObject+Error.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -195,7 +204,10 @@
 				EBC8BD7826E191E10034C8E2 /* UserListView.swift in Sources */,
 				EBC8BD7526E18E490034C8E2 /* UserViewModel.swift in Sources */,
 				EBC8BD6226E18A050034C8E2 /* IesbSocialApp.swift in Sources */,
+				83ECF97526E1A570009C34DA /* Post.swift in Sources */,
 				EBC8BD7226E18A970034C8E2 /* User.swift in Sources */,
+				8366E43D26F23761000D202F /* FormUserView.swift in Sources */,
+				83ECF97726E1ABEA009C34DA /* ObservableObject+Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
