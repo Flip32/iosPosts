@@ -8,6 +8,9 @@ struct UserListView: View {
     @StateObject
     var postViewModel = PostViewModel()
     
+    @State
+    private var showForm = false
+    
     var body: some View {
         NavigationView {
             Group {
@@ -27,11 +30,19 @@ struct UserListView: View {
                 }
             }
             .navigationTitle("Usuários")
+            .navigationBarItems(
+                            trailing: Button("\(Image(systemName: "person.crop.circle.badge.plus"))") {
+                                showForm.toggle()
+                            }.font(Font.title.weight(.bold))
+                        )
         }
         .environmentObject(postViewModel)
         .onAppear {
             viewModel.newFetchUsers()
             
+        }
+        .sheet(isPresented: $showForm) {
+            FormUserView(userViewModel: UserViewModel())
         }
     }
     
