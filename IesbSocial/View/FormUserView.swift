@@ -38,7 +38,7 @@ struct FormUserView: View {
                 }
                 Button("Salvar"){
                     // TODO - Resolver questao do id
-                    userViewModel.addUser(user: User(id: 1, name: name, email: email), bindingMsg: $showMessage)
+                    userViewModel.addUser(user: User(id: 0, name: name, email: email), bindingMsg: $showMessage)
                     showMessage = true
                 }
                 .alert(isPresented: $showMessage){

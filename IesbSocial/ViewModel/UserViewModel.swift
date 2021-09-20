@@ -39,22 +39,22 @@ class UserViewModel: ObservableObject {
     }
     
 
-    func fetchUsers() {
-        let session = URLSession.shared
-        
-        if let url = URL(string: "\(kBaseURL)/users") {
-            session.dataTask(with: url) { (data, response, error) in
-                if let resp = response as? HTTPURLResponse,
-                   resp.statusCode >= 200, resp.statusCode < 300,
-                   let json = data {
-                    DispatchQueue.main.async {
-                        self.users = try! JSONDecoder().decode([User].self, from: json)
-                    }
-                }
-            }.resume()
-        }
-        
-    }
+//    func fetchUsers() {
+//        let session = URLSession.shared
+//
+//        if let url = URL(string: "\(kBaseURL)/users") {
+//            session.dataTask(with: url) { (data, response, error) in
+//                if let resp = response as? HTTPURLResponse,
+//                   resp.statusCode >= 200, resp.statusCode < 300,
+//                   let json = data {
+//                    DispatchQueue.main.async {
+//                        self.users = try! JSONDecoder().decode([User].self, from: json)
+//                    }
+//                }
+//            }.resume()
+//        }
+//
+//    }
     
     func addUser(user: User, bindingMsg: Binding<Bool>) {
         if let url = URL(string: "\(kBaseURL)/users") {

@@ -15,7 +15,8 @@ struct UserListView: View {
         NavigationView {
             Group {
                 if viewModel.loading {
-                    loading()
+                    ProgressView("Loading...")
+                    
                 }else {
                     List {
                         ForEach(viewModel.users) { user in
